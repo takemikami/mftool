@@ -166,7 +166,7 @@ function NenkinShiwake() {
             <Box sx={{ my: 2 }}>
                 <Typography>①給与仕訳のエクスポートファイルの指定</Typography>
                 <Typography variant="caption" color="text.secondary">
-                    MoneyForward会計で、左側メニュー:会計帳簿 → 仕訳帳 → 検索フォーム下ボタン:エクスポート → CSV出力と選び、ストレージに出力された「仕訳帳_YYYYMMDD_HHMM.csv」というファイルをダウンロードし、ここに指定します。
+                    MoneyForward会計で、左側メニュー:会計帳簿 → 仕訳帳 → 検索フォーム下ボタン:エクスポート → CSV出力と選び、ストレージに出力された「仕訳帳_YYYYMMDD_HHMM.csv」というファイルをダウンロードし、ここに指定します。(借方勘定科目=役員報酬で絞り込むことをおすすめします)
                 </Typography>
                 <Grid container spacing={3}>
                     <Grid item xs={3} sx={{ my: 2 }}>
