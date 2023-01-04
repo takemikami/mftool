@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/mftool/nenkin/static/css/main.073c9b0a.css",
+    "main.js": "/mftool/nenkin/static/js/main.bebf71a6.js",
+    "static/js/415.4799b581.chunk.js": "/mftool/nenkin/static/js/415.4799b581.chunk.js",
+    "index.html": "/mftool/nenkin/index.html",
+    "main.073c9b0a.css.map": "/mftool/nenkin/static/css/main.073c9b0a.css.map",
+    "main.bebf71a6.js.map": "/mftool/nenkin/static/js/main.bebf71a6.js.map",
+    "415.4799b581.chunk.js.map": "/mftool/nenkin/static/js/415.4799b581.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.bebf71a6.js"
+  ]
+}
