@@ -1,10 +1,18 @@
-# mftool
+mftool
+---
 
-MoneyFoward会計、給与仕訳の補助ツール
+MoneyForward仕訳CSV 作成ツール群
 
-## 開発者向け
+## 給与仕訳の補助ツール
+
+ツールのURL  
+https://takemikami.github.io/mftool/nenkin
+
+ブログの紹介記事  
+https://takemikami.com/2023/01/04/MoneyFoward.html
+
+開発用スタートコマンド
 
 ```
-npm install 
-npm start
+yarn workspace nenkin start
 ```
