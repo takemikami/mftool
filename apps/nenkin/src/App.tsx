@@ -245,6 +245,9 @@ function Copyright() {
 function App() {
   return (
       <Container maxWidth="md">
+        <div style={{position: 'absolute', top: '1.2em', left: '1.2em'}}>
+          <a href="https://takemikami.github.io/mftool/">&lt;&lt; ツール一覧に戻る</a>
+        </div>
         <Box sx={{ my: 4 }}>
           <Typography variant="h4" component="h1" gutterBottom>
               MoneyFoward会計、給与仕訳の補助ツール
