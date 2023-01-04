@@ -4,8 +4,9 @@
     "packages": ["apps/*"]
   },
   "scripts": {
-    "build": "yarn build:root && yarn build:nenkin",
+    "build": "yarn build:root && yarn build:infomart && yarn build:nenkin",
     "build:root": "mkdir -p build && cp public/index.html build/",
+    "build:infomart": "yarn workspace infomart build",
     "build:nenkin": "yarn workspace nenkin build"
   }
 }
