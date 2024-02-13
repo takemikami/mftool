@@ -34,11 +34,11 @@ export function transformCsv(rawData: any, settings: { [key: string]: any; }) {
     const data: Array<{ [key: string]: any }> = rawData;
     const seikyuMeisai: { [date: string]: any } = {};
     for (const row of data) {
-        if (row['請求書番号']) {
-            if (!seikyuMeisai[row['請求書番号']]) {
-                seikyuMeisai[row['請求書番号']] = []
+        if (row['おもて情報.請求書番号']) {
+            if (!seikyuMeisai[row['おもて情報.請求書番号']]) {
+                seikyuMeisai[row['おもて情報.請求書番号']] = []
             }
-            seikyuMeisai[row['請求書番号']].push(row)
+            seikyuMeisai[row['おもて情報.請求書番号']].push(row)
         }
     }
 
@@ -58,7 +58,7 @@ export function transformCsv(rawData: any, settings: { [key: string]: any; }) {
         journals.push({
             id: idnum,
             no: idx,
-            dt: seikyuMeisai[num][0]['請求書発行日'],
+            dt: seikyuMeisai[num][0]['おもて情報.請求書発行日'],
             dr_sbj1: '',
             dr_sbj2: '',
             dr_taxg: '',
@@ -69,9 +69,9 @@ export function transformCsv(rawData: any, settings: { [key: string]: any; }) {
             cr_sbj2: settings['mibaraiSbj2'],
             cr_taxg: '',
             cr_dept: '',
-            cr_amount: seikyuMeisai[num][0]['今回請求金額（税込）'],
+            cr_amount: seikyuMeisai[num][0]['おもて情報.今回請求金額（税込）'],
             cr_tax: '',
-            remarks: seikyuMeisai[num][0]['支払先'] + '(No.' + seikyuMeisai[num][0]['請求書番号'] + ')',
+            remarks: seikyuMeisai[num][0]['おもて情報.支払先'] + '(No.' + seikyuMeisai[num][0]['おもて情報.請求書番号'] + ')',
             note: '',
             tag: '',
             type: '',
@@ -83,13 +83,13 @@ export function transformCsv(rawData: any, settings: { [key: string]: any; }) {
             var sbj1 = settings['seikyuSbjC1'];
             var sbj2 = settings['seikyuSbjC2'];
             if (settings['seikyuRuleA'] !== '') {
-                if(row['明細項目'].match(settings['seikyuRuleA'])) {
+                if(row['明細情報.明細項目'].match(settings['seikyuRuleA'])) {
                     sbj1 = settings['seikyuSbjA1'];
                     sbj2 = settings['seikyuSbjA2'];
                 }
             }
             if (settings['seikyuRuleB'] !== '') {
-                if(row['明細項目'].match(settings['seikyuRuleB'])) {
+                if(row['明細情報.明細項目'].match(settings['seikyuRuleB'])) {
                     sbj1 = settings['seikyuSbjB1'];
                     sbj2 = settings['seikyuSbjB2'];
                 }
@@ -99,12 +99,12 @@ export function transformCsv(rawData: any, settings: { [key: string]: any; }) {
             journals.push({
                 id: idnum,
                 no: idx,
-                dt: row['請求書発行日'],
+                dt: row['おもて情報.請求書発行日'],
                 dr_sbj1: sbj1,
                 dr_sbj2: sbj2,
                 dr_taxg: '課仕 10%',
                 dr_dept: '',
-                dr_amount: Math.round(parseInt(row['金額']) * 1.1),
+                dr_amount: Math.round(parseInt(row['明細情報.金額']) * 1.1),
                 dr_tax: '',
                 cr_sbj1: '',
                 cr_sbj2: '',
@@ -112,7 +112,7 @@ export function transformCsv(rawData: any, settings: { [key: string]: any; }) {
                 cr_dept: '',
                 cr_amount: '',
                 cr_tax: '',
-                remarks: row['明細項目'],
+                remarks: row['明細情報.明細項目'],
                 note: '',
                 tag: '',
                 type: '',
