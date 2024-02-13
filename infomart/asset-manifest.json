@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/mftool/infomart/static/css/main.073c9b0a.css",
-    "main.js": "/mftool/infomart/static/js/main.7705e043.js",
+    "main.js": "/mftool/infomart/static/js/main.8421fc80.js",
     "static/js/415.82a1cb97.chunk.js": "/mftool/infomart/static/js/415.82a1cb97.chunk.js",
     "index.html": "/mftool/infomart/index.html",
     "main.073c9b0a.css.map": "/mftool/infomart/static/css/main.073c9b0a.css.map",
-    "main.7705e043.js.map": "/mftool/infomart/static/js/main.7705e043.js.map",
+    "main.8421fc80.js.map": "/mftool/infomart/static/js/main.8421fc80.js.map",
     "415.82a1cb97.chunk.js.map": "/mftool/infomart/static/js/415.82a1cb97.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.7705e043.js"
+    "static/js/main.8421fc80.js"
   ]
 }
