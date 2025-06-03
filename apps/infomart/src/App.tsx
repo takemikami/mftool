@@ -71,7 +71,7 @@ export function transformCsv(rawData: any, settings: { [key: string]: any; }) {
             cr_dept: '',
             cr_amount: seikyuMeisai[num][0]['おもて情報.今回請求金額（税込）'],
             cr_tax: '',
-            remarks: seikyuMeisai[num][0]['おもて情報.支払先'] + '(No.' + seikyuMeisai[num][0]['おもて情報.請求書番号'] + ')',
+            remarks: seikyuMeisai[num][0]['おもて情報.請求元'] + '(No.' + seikyuMeisai[num][0]['おもて情報.請求書番号'] + ')',
             note: '',
             tag: '',
             type: '',
@@ -190,7 +190,7 @@ function InfomartShiwake() {
                     });
                 }
             }
-            fileReader.readAsText(fileOrigin, 'Shift_JIS');
+            fileReader.readAsText(fileOrigin, 'UTF-8');
             console.log(fileOriginName)
             setFileName('infomart_' + fileOriginName.replace('EveryList_','').replace(/\.[^/.]+$/, ""));
         }
